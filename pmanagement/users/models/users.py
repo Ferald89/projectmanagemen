@@ -30,10 +30,10 @@ class User(PManagementModel, AbstractUser):
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name']
+    REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     def ___str__(self):
-        return self.email
+        return self.username
 
     def get_short_name(self):
-        return self.email
+        return self.username

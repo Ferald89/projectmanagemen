@@ -49,7 +49,8 @@ THIRD_PARTY_APPS = [
     'django_filters'
 ]
 LOCAL_APPS = [
-    'pmanagement.users.apps.UsersAppConfig'
+    'pmanagement.users.apps.UsersAppConfig',
+    'pmanagement.projects.apps.ProjectsAppsConfig'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -141,7 +142,7 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.s
 # Admin
 ADMIN_URL = 'admin/'
 ADMINS = [
-    ("""Pablo Trinidad""", 'pablotrinidad@ciencias.unam.mx'),
+    ("""Fernando Aldair""", 'fernandog.deica@gmail.com'),
 ]
 MANAGERS = ADMINS
 
