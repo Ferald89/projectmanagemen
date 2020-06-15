@@ -8,7 +8,7 @@ psycopg2==2.7.4 --no-binary psycopg2
 django==2.0.10
 
 # Django REST Frmework
-djangorestframework==3.9.0
+djangorestframework==3.9.1
 django-filter==2.0.0
 
 # JWT
