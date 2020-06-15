@@ -30,6 +30,9 @@ ROOT_URLCONF = 'config.urls'
 # WSGI
 WSGI_APPLICATION = 'config.wsgi.application'
 
+# User & autentications
+AUTH_USER_MODEL = 'users.user'
+
 # Apps
 DJANGO_APPS = [
     'django.contrib.auth',
@@ -46,6 +49,7 @@ THIRD_PARTY_APPS = [
     'django_filters'
 ]
 LOCAL_APPS = [
+    'pmanagement.users.apps.UsersAppConfig'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
