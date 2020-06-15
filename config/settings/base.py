@@ -50,7 +50,8 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'pmanagement.users.apps.UsersAppConfig',
-    'pmanagement.projects.apps.ProjectsAppsConfig'
+    'pmanagement.projects.apps.ProjectsAppsConfig',
+    'pmanagement.items.apps.ItemsAppsConfig'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

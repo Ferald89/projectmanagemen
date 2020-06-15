@@ -15,6 +15,13 @@ class Project(PManagementModel):
     about = models.CharField('project description', max_length=255)
     picture = models.ImageField(upload_to='project/picture', blank=True, null=True)
 
+    members = models.ManyToManyField(
+                "users.User",
+                through='projects.Membership',
+                through_fields=('project', 'user'),
+                related_name="projectmembers"
+    )
+
     budget = models.DecimalField(default=0, max_digits=999, decimal_places=4)
 
     client = models.CharField('client', max_length=140)
