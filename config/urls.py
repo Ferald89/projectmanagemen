@@ -8,6 +8,8 @@ from django.contrib import admin
 urlpatterns = [
     # Django Admin
     path(settings.ADMIN_URL, admin.site.urls),
-    path('', include(('pmanagement.users.urls', 'users'), namespace='users'))
+    path('', include(('pmanagement.users.urls', 'users'), namespace='users')),
+    path('', include(('pmanagement.projects.urls', 'projects'), namespace='projects'))
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

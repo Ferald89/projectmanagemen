@@ -7,7 +7,7 @@ from rest_framework import serializers
 from pmanagement.projects.models import Project
 
 
-class ProjectModelSerializer(serializers.Serializer):
+class ProjectModelSerializer(serializers.ModelSerializer):
     """Serializer model serializer."""
 
     class Meta:
@@ -25,3 +25,6 @@ class ProjectModelSerializer(serializers.Serializer):
             'started_date',
             'delivery_date'
         )
+
+    def validate(self, data):
+        return data
