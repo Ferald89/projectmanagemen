@@ -22,7 +22,7 @@ class MembershipModelSerializer(serializers.ModelSerializer):
             'is_admin',
             )
         read_only_fields = (
-            'user'
+            'user',
             )
 
 

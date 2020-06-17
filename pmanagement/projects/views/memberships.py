@@ -25,12 +25,12 @@ class MembershipViewSet(
                         viewsets.GenericViewSet):
 
     serializer_class = MembershipModelSerializer
-    """Circle membership view set."""
+    """Project membership view set."""
 
     def dispatch(self, request, *args, **kwargs):
         """Verify that project exists."""
         slug_name = kwargs['slug_name']
-        self.circle = get_object_or_404(Project, slug_name=slug_name)
+        self.project = get_object_or_404(Project, slug_name=slug_name)
         return super(MembershipViewSet, self).dispatch(request, *args, **kwargs)
 
     def get_permissions(self):
