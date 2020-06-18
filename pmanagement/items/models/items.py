@@ -8,7 +8,20 @@ from pmanagement.utils.models import PManagementModel
 
 
 class Item(PManagementModel):
-    "Items models"
+    """Items models"""
+
+    order_by = models.ForeignKey(
+                    "users.User",
+                    on_delete=models.SET_NULL,
+                    null=True
+                    )
+
+    order_in = models.ForeignKey(
+                    "projects.Project",
+                    on_delete=models.SET_NULL,
+                    null=True
+                    )
+
     name = models.CharField('item name', max_length=140)
 
     comments = models.TextField(blank=True)

@@ -11,7 +11,7 @@ from .views import items as items_views
 
 router = DefaultRouter()
 router.register(
-            r'circles/(?P<slug_name>[a-zA-Z0-p_-]+)/items',
+            r'projects/(?P<slug_name>[a-zA-Z0-p_-]+)/items',
             items_views.ItemViewSet,
             basename='items'
             )
